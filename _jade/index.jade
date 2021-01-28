@@ -1,0 +1,49 @@
+//output: ../index.html
+
+
+-var title = 'Henrix Crafts | Hungarian Wood Craftsman'
+-var css = "../css/style.css"
+-var js = "../js/app.js"
+-var font = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet'
+
+mixin link(text)
+    li text
+        
+include _svg.jade
+//- include _workshop.jade
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= title
+        link(rel="stylesheet", href=font)
+        link(rel="stylesheet", href=css)
+        script(defer src=js)
+    body
+        #main_container
+
+            nav#top_nav
+                h1#logo Hen®ix
+                    .reg 
+                    span  Crafts
+                ul#navigation_links
+                    +phone
+                    +mail
+                    +face
+                        
+                
+            #main_backgorund_image
+            #scroll_down_button  
+                +arrowDown("arrow_down")           
+            //- button#workshop_button Workshop
+                
+            
+            section#workshop_section
+                +carving
+                h1 Műhely
+                h4 A Lorem Ipsum részleteinek sok változata elérhetõ, de a legtöbbet megváltoztatták egy kis humorral és véletlenszerûen kiválasztott szavakkal, amik kicsit sem teszik értelmessé. Ha használni készülsz a Lorem Ipsumot, biztosnak kell lenned abban, hogy semmi kínos sincs elrejtve a szöveg közepén.
+                h3 Munkásságom
+                #portfolio_gallery
