@@ -15,17 +15,19 @@ function workshop() {
 
     if(workshop_now < fos / 2) {
         span.textContent = ' Műhely'
+        // top_nav.style.background = `rgba(255,0,0,.9)`;
         // span.style.animationName = 'slideoff'
         // span.onanimationend = function() {
         //     span.textContent = ' Műhely'
         // }
 
     } else {
-        span.textContent = '  '
+        span.textContent = ' Crafts'
     }
 
     if(folio_now < 300) {
-        span.textContent = ' Portfólió'
+        span.textContent = ' Portfólió';
+        // top_nav.style.background = `rgba(0,0,255,.9)`;
     }
 }
 
@@ -107,7 +109,7 @@ function portfolio() {
 function animations(){
     let scrolled = window.pageYOffset;
 
-    if(scrolled > fos / 2) {
+    if(scrolled > 10) {
         top_nav.style.background = `rgba(0,0,0,.9)`;
         // scroll_down_button.style.display = 'none'
         // logo.style.fontSize = `24px`
