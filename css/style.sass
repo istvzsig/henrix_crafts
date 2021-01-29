@@ -283,7 +283,17 @@ section#workshop_section
         height: $w
         line-height: $w
         overflow: hidden
-
+        &:after
+            content: 'FOSOSOSSOS'
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 11
+            color: black
+            width: $w
+            line-height: $w
+            text-align: center
+            display: none
         .container_of_folio_item
             width: $w
             height: $w
@@ -294,7 +304,35 @@ section#workshop_section
 
             transition: 600ms all ease
                 delay: 300ms
-        .galleryText
-            position: absolute
-            z-index: 1
-            color: red
+
+
+
+#galleryText
+    position: absolute !important
+    background: $black20
+    transition-delay: 300ms
+    color: black
+    width: 100%
+    top: 0
+    left: 0
+    text-align: center
+    display: none
+
+
+footer
+    width: 100vw
+    background: $white100
+    font-size: 12px
+    text-align: center
+    position: relative
+    // top: 300vh
+    z-index: 1
+    color: $black100
+    padding: 3rem 0
+    text-transform: uppercase
+
+.showme
+    display: block !important
+    z-index: 100  !important
+    filter: none !important
+    transform: none !important
