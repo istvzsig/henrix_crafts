@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tornyi Imre Henrik - Faszobrász Gyulán</title>
-    <link rel="stylesheet" href="../style/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script defer src="../script/app.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="../style/app.css">
+
 </head>
 
 <body>
     <div id="main_container">
-        <section>
+        <section id="section_splash">
             <nav id="top_nav">
 
                 <a id="telephone_contact" href="tel:+36307539329">
@@ -236,7 +237,7 @@
 
         </section>
 
-        <main>
+        <section id="section_about">
             <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In  -->
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1963.4px" height="2075.8px" viewBox="0 0 1963.4 2075.8" style="enable-background:new 0 0 1963.4 2075.8;"
                 xml:space="preserve">
@@ -287,10 +288,31 @@
             <h1 id='szlogen'>
                 Osztozzon ebben az örömömben ön is!
             </h1>
-        </main>
+        </section>
 
 
+        <section id="section_portfolio">
 
+            
+            <!-- <h1>Ime nehany a munkaimbol</h1> -->
+
+            <div id="portfolio_gallery">
+
+                <?php
+                    $image_dir = "images/portfolio/";
+                    $images = glob($image_dir."*.*");
+
+                    foreach ($images as $image) {
+                        echo '<img src="'.$image.'" /><br />';
+                    }
+
+
+                ?>
+
+            </div>
+
+
+        </section>
 
 
 
