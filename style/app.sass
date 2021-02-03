@@ -190,8 +190,18 @@ html, body, *
             opacity: 1 !important
             svg
                 fill: rgba(255,255,255, 1)
+
+
                 width: 70%
 
+@mixin columns($c)
+    -webkit-columns: $c auto
+    -moz-columns: $c auto
+    columns: $c auto
+
+@mixin clip
+    -webkit-clip-path: polygon(50% 0%, 90% 49%, 50% 100%, 10% 50%)
+    clip-path: polygon(50% 0%, 90% 49%, 50% 100%, 10% 50%)
 
 #section_portfolio
     width: 100vw
@@ -212,8 +222,7 @@ html, body, *
     #portfolio_gallery
         width: 100%
         height: auto
-        columns: 3 auto
-        column-gap: 0
+        @include columns(3)
 
         img
             transition: 300ms all
@@ -247,7 +256,7 @@ html, body, *
     display: block
     // transform:
     margin: 2rem
-    clip-path: polygon(50% 0%, 90% 49%, 50% 100%, 10% 50%)
+    @include clip
     // opacity: .2
 
 
